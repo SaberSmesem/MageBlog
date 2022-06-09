@@ -1,5 +1,5 @@
 <?php
-namespace SaberSmesem\MageBlog\Controller;
+namespace SaberSmesem\MageBlog\Controller\Index;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
