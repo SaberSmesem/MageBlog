@@ -1,0 +1,90 @@
+/** Magento2 support 'less'  in next post i'll explain how to use less in magento2 module **/
+/** here we add normal css file in magento2 **/
+
+.post-list-wrapper{
+    /*background-color: rebeccapurple;*/
+}
+
+.post-list{
+    list-style: none;
+}
+
+.post-info{
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+.post-info .post-posted-date .label{
+    font-weight: bold;
+}
+
+.post-info .post-posted-date .value{
+    font-style: italic;
+}
+
+.post-info .post-categories .label{
+    font-weight: bold;
+}
+
+.post-info .post-categories .value{
+    font-style: italic;
+}
+
+.mf-blog-icon {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    background-size: cover;
+}
+
+.mf-blog-icon.mfbi-calendar {
+    background-image: url(../../SaberSmesem_MageBlog/images/calendar-icon.svg);
+}
+
+.mf-blog-icon.mfbi-folder {
+    background-image: url(../../SaberSmesem_MageBlog/images/folder-icon.svg);
+}
+
+/* Dashed border */
+.post-footer.dashed{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    border-top: 3px dashed #bbb;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Dotted border */
+.post-footer.dotted {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    border-top: 3px dotted #bbb;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Solid border */
+.post-footer.solid {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    border-top: 3px solid #bbb;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Rounded border */
+.post-footer.rounded {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+

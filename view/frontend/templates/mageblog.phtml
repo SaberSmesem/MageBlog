@@ -2,6 +2,58 @@
 /** @var \SaberSmesem\MageBlog\Block\Template $block */
 ?>
 
-<div class="template">
-    <h1><?=$block->getMageBlog()?></h1>
+<div class="page-main">
+    <h1>
+        <?php
+        //$block->getMageBlog()
+        ?>
+    </h1>
+
+    <div class="post-list-wrapper">
+        <ul class="post-list">
+            <li class="post-holder post-holder-5">
+                <div class="post-header">
+                    <div class="post-title-holder clearfix">
+                        <h2 class="post-title">
+                            <a class="post-item-link" href="#">How to Get Config Value Inside Email Template</a>
+                        </h2>
+                    </div>
+                    <div class="post-info">
+                        <div class="item post-posted-date">
+                            <i class="mf-blog-icon mfbi-calendar"></i>
+                            <span class="label">Posted:</span>
+                            <span class="value">May 09, 2022</span>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="item post-categories">
+                            <i class="mf-blog-icon mfbi-folder"></i>
+                            <span class="label">Categories:</span>
+                            <a title="Magento 2" href="javascript:void(0)">Magento 2</a>,
+                            <a title="Tutorials" href="javascript:void(0)">Tutorials</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <div class="post-description clearfix">
+                        <div class="post-ftimg-hld">
+                            <a href="#" title="How to Get Config Value Inside Email Template">
+                                <img src="<?php echo $this->getViewFileUrl('SaberSmesem_MageBlog::images/posts/post1.jpg'); ?>" alt="How to Get Config Value Inside Email Template">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="post-text-hld">
+                        <div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+                            <p>Customising email templates is a common task in Magento 2. But what if you want to get a system configuration value inside an email template? Let's have a look together.</p>
+                            <p></p>
+                        </div>
+                        <a class="post-read-more" href="#" title="How to Get Config Value Inside Email Template">
+                            Read more »
+                        </a>
+                    </div>
+
+                </div>
+                <div class="post-footer dotted"></div>
+            </li>
+        </ul>
+    </div>
 </div>
