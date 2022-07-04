@@ -35,6 +35,7 @@ class Index extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
+        /*
         $post = $this->_postFactory->create();
 		$collection = $post->getCollection();
 		foreach($collection as $item){
@@ -47,6 +48,7 @@ class Index extends \Magento\Framework\App\Action\Action
         echo "Get Data From sabersmesem_mageblog_posts table";
 
         die('<br>Read Data');
+        */
 
         return $this->_pageFactory->create();
     }
