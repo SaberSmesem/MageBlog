@@ -3,24 +3,24 @@ namespace SaberSmesem\MageBlog\Block;
 
 class MageBlog extends \Magento\Framework\View\Element\Template
 {
-
-    protected $_postFactory;
+    protected $_postCollection;
 
     /**
      * @param \Magento\Framework\View\Element\Template\Context $context
+     * @param \SaberSmesem\MageBlog\Model\ResourceModel\Post\Collection $postCollection
      * @param array $data
-     * @param \SaberSmesem\MageBlog\Model\PostFactory $postFactory
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \SaberSmesem\MageBlog\Model\PostFactory $postFactory,
+        \SaberSmesem\MageBlog\Model\ResourceModel\Post\Collection $postCollection,
         array $data = []
     ) {
-        $this->_postFactory = $postFactory;
+        $this->_postCollection = $postCollection;
         parent::__construct($context, $data);
-        $collection = $this->_postFactory->create()
-                                        ->getCollection();
-        $this->setCollection($collection);
+        // Filter enable posts
+        $this->_postCollection->addFieldToFilter('status', 1);
+        
+        $this->setCollection($this->_postCollection);
         $this->pageConfig->getTitle()->set(__('Magento Blog List'));
     }
 
