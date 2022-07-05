@@ -20,11 +20,12 @@ $_posts = $block->getCollection();
         <ul class="post-list">
             <?php  // read collection as magento1.x and display in list
             foreach ($_posts as $_post): ?>
+            <?php $post_url = $block->getUrl('mageblog/post/detail', ['id' => $_post->getId()]); ?>
             <li class="post-holder post-holder-5">
                 <div class="post-header">
                     <div class="post-title-holder clearfix">
                         <h2 class="post-title">
-                            <a class="post-item-link" href="<?= $block->getUrl('mageblog/post/detail', ['id' => $_post->getId()]) ?>">
+                            <a class="post-item-link" href="<?=$post_url?>">
                                 <?=$_post->getTitle()?>
                             </a>
                         </h2>
@@ -47,7 +48,7 @@ $_posts = $block->getCollection();
                 <div class="post-content">
                     <div class="post-description clearfix">
                         <div class="post-ftimg-hld">
-                            <a href="#" title="<?=$_post->getTitle()?>">
+                            <a href="<?=$post_url?>" title="<?=$_post->getTitle()?>">
                                 <img src="<?=$this->getViewFileUrl('SaberSmesem_MageBlog::images/posts/'.$_post->getFeaturedImage());?>" alt="<?=$_post->getTitle()?>">
                             </a>
                         </div>
@@ -65,7 +66,7 @@ $_posts = $block->getCollection();
                             </p>
                             <p></p>
                         </div>
-                        <a class="post-read-more" href="#" title="<?=$_post->getTitle()?>">
+                        <a class="post-read-more" href="<?=$post_url?>" title="<?=$_post->getTitle()?>">
                             Read more »
                         </a>
                     </div>
