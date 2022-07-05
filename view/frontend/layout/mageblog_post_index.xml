@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+		<title>Magento 2 Simple Blog Module</title>
+        <css src="SaberSmesem_MageBlog::css/blog.css"/>
+        <link src="SaberSmesem_MageBlog::js/blog.js"/>
+	</head>
+    <body>
+        <referenceContainer name="content">
+            <block class="SaberSmesem\MageBlog\Block\Index" name="SaberSmesem_MageBlog_Name" template="SaberSmesem_MageBlog::post/index.phtml" />
+        </referenceContainer>
+    </body>
+</page>

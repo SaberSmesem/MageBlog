@@ -1,7 +1,7 @@
 <?php
 namespace SaberSmesem\MageBlog\Block;
 
-class MageBlog extends \Magento\Framework\View\Element\Template
+class Index extends \Magento\Framework\View\Element\Template
 {
     protected $_postCollection;
 
