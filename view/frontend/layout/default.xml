@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="SaberSmesem_MageBlog_Link">
+                <arguments>
+                    <argument name="label" translate="true"
+                        xsi:type="string">Magento Blog</argument>
+                    <argument name="path"
+                        xsi:type="string">mageblog/index/index</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
