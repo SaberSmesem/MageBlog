@@ -1,33 +1,31 @@
 <?php
 namespace SaberSmesem\MageBlog\Controller\Index;
 
-use \Magento\Framework\App\Action\HttpGetActionInterface;
-use \Magento\Framework\Controller\Result\RedirectFactory;
-
-class Index implements HttpGetActionInterface
+class Index extends \Magento\Framework\App\Action\Action
 {
     /**
-     * @var \Magento\Framework\Controller\Result\RedirectFactory
+     * @var \Magento\Framework\View\Result\PageFactory
      */
-    protected $_redirectFactory;
+    protected $_pageFactory;
 
     /**
-     * @param \Magento\Framework\Controller\Result\RedirectFactory $redirectFactory
+     * @param \Magento\Framework\App\Action\Context $context
      */
     public function __construct(
-        RedirectFactory $redirectFactory
+       \Magento\Framework\App\Action\Context $context,
+       \Magento\Framework\View\Result\PageFactory $pageFactory
     )
     {
-        $this->_redirectFactory = $redirectFactory;
+        $this->_pageFactory = $pageFactory;
+        return parent::__construct($context);
     }
     /**
-     * redirect action
+     * View page action
      *
      * @return \Magento\Framework\Controller\ResultInterface
      */
     public function execute()
     {
-        $redirect =  $this->_redirectFactory->create();
-        return $redirect->setPath('*/post/index');
+        return $this->_pageFactory->create();
     }
 }

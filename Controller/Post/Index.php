@@ -1,55 +1,33 @@
 <?php
 namespace SaberSmesem\MageBlog\Controller\Post;
 
-class Index extends \Magento\Framework\App\Action\Action
+use \Magento\Framework\App\Action\HttpGetActionInterface;
+use \Magento\Framework\Controller\Result\RedirectFactory;
+
+class Index implements HttpGetActionInterface
 {
     /**
-     * @var \Magento\Framework\View\Result\PageFactory
+     * @var \Magento\Framework\Controller\Result\RedirectFactory
      */
-    protected $_pageFactory;
+    protected $_redirectFactory;
 
     /**
-     * \SaberSmesem\MageBlog\Model\PostFactory
-     */
-    protected $_postFactory;
-
-    protected $_postsFactory;
-
-    /**
-     * @param \Magento\Framework\App\Action\Context $context
+     * @param \Magento\Framework\Controller\Result\RedirectFactory $redirectFactory
      */
     public function __construct(
-       \Magento\Framework\App\Action\Context $context,
-       \Magento\Framework\View\Result\PageFactory $pageFactory,
-       \SaberSmesem\MageBlog\Model\PostFactory $postFactory
+        RedirectFactory $redirectFactory
     )
     {
-        $this->_pageFactory = $pageFactory;
-        $this->_postFactory = $postFactory;
-        return parent::__construct($context);
+        $this->_redirectFactory = $redirectFactory;
     }
     /**
-     * View page action
+     * redirect action
      *
      * @return \Magento\Framework\Controller\ResultInterface
      */
     public function execute()
     {
-        /*
-        $post = $this->_postFactory->create();
-		$collection = $post->getCollection();
-		foreach($collection as $item){
-			echo "<pre>";
-			print_r($item->getData());
-			echo "</pre>";
-		}
-		exit();
-        
-        echo "Get Data From sabersmesem_mageblog_posts table";
-
-        die('<br>Read Data');
-        */
-
-        return $this->_pageFactory->create();
+        $redirect =  $this->_redirectFactory->create();
+        return $redirect->setPath('*/index/index');
     }
 }
