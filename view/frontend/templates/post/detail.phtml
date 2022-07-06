@@ -1,7 +1,64 @@
 <?php
 /** @var \SaberSmesem\MageBlog\Block\Template $block */
+
+$_post = $block->getPost();
 ?>
 
-<div class="template">
-    <h1><?=$block->getName()?></h1>
+<div class="page-main">
+    <div class="post-list-wrapper">
+        <?php if ($_post): ?>
+        <ul class="post-list">
+
+            <li class="post-holder post-holder-5">
+                <div class="post-header">
+                    <div class="post-title-holder clearfix">
+                        <h2 class="post-title">
+                            <a class="post-item-link" href="javascript:void(0)">
+                                <?=$_post->getTitle()?>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="post-info">
+                        <div class="item post-posted-date">
+                            <i class="mf-blog-icon mfbi-calendar"></i>
+                            <span class="label">Posted:</span>
+                            <span class="value"><?=$_post->getCreatedAt()?></span>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="item post-categories">
+                            <i class="mf-blog-icon mfbi-folder"></i>
+                            <span class="label">Categories:</span>
+                            <a title="Magento 2" href="javascript:void(0)">Magento 2</a>,
+                            <a title="Tutorials" href="javascript:void(0)">Tutorials</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <div class="post-description clearfix">
+                        <div class="post-ftimg-hld">
+                            <a href="javascript:void(0)" title="<?=$_post->getTitle()?>">
+                                <img src="<?=$this->getViewFileUrl('SaberSmesem_MageBlog::images/posts/'.$_post->getFeaturedImage());?>" alt="<?=$_post->getTitle()?>">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="post-text-hld">
+                        <div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+                            <p>
+                                <?=$_post->getContent()?>
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="post-footer"></div>
+            </li>
+        </ul>
+
+        <?php else: ?>
+            <div class="message info empty">
+                <span><?php echo __('No post with this id.'); ?></span>
+            </div>
+        <?php endif ?>
+    </div>
 </div>
