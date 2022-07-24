@@ -9,4 +9,18 @@
         </arguments>
     </type>
     
+    <virtualType name="SaberSmesem\MageBlog\Model\ResourceModel\Post\Post\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sabersmesem_mageblog_posts</argument>
+            <argument name="resourceModel" xsi:type="string">SaberSmesem\MageBlog\Model\ResourceModel\Post</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="mageblog_record_post_list_data_source" xsi:type="string">SaberSmesem\MageBlog\Model\ResourceModel\Post\Post\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
 </config>
