@@ -134,7 +134,7 @@
            </argument>
        </column>
 
-       <column name="content" >
+       <column name="content"  class="SaberSmesem\MageBlog\Ui\Component\Listing\Post\Column\Content">
            <argument name="data" xsi:type="array">
                <item name="config" xsi:type="array">
                    <item name="filter" xsi:type="string">false</item>
