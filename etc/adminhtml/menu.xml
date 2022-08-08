@@ -1,11 +1,27 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="SaberSmesem_MageBlog::menu_mage_blog" title="Blog" module="SaberSmesem_MageBlog" sortOrder="10" resource="SaberSmesem_MageBlog::menu_mage_blog"/>
-        <add id="SaberSmesem_MageBlog::menu_mage_blog_add_row" title="Add Post" module="SaberSmesem_MageBlog" sortOrder="20"  parent="SaberSmesem_MageBlog::menu_mage_blog"  action="mageblog/posts/add" resource="SaberSmesem_MageBlog::menu_mage_blog_add_row"/>
+        <add id="SaberSmesem_MageBlog::menu_mage_blog" 
+             title="Blog" module="SaberSmesem_MageBlog" 
+             sortOrder="10" resource="SaberSmesem_MageBlog::menu_mage_blog"/>
         
-        <add id="SaberSmesem_MageBlog::post" title="Manage Posts" module="SaberSmesem_MageBlog" sortOrder="10" action="mageblog/post" resource="SaberSmesem_MageBlog::post" parent="SaberSmesem_MageBlog::menu_mage_blog"/>
-        <add id="SaberSmesem_MageBlog::mageblog_configuration" title="Configuration" module="SaberSmesem_MageBlog" sortOrder="99" parent="SaberSmesem_MageBlog::menu_mage_blog" action="adminhtml/system_config/edit/section/mageblog" resource="SaberSmesem_MageBlog::mageblog_configuration"/>
+        <add id="SaberSmesem_MageBlog::menu_mage_blog_add_row2"
+             title="Add Post" module="SaberSmesem_MageBlog" 
+             sortOrder="20"  parent="SaberSmesem_MageBlog::menu_mage_blog"  
+             action="mageblog/post/add" 
+             resource="SaberSmesem_MageBlog::menu_mage_blog_add_row"/>
+        
+        <add id="SaberSmesem_MageBlog::post" 
+             title="Manage Posts" module="SaberSmesem_MageBlog" 
+             sortOrder="10" action="mageblog/post" 
+             resource="SaberSmesem_MageBlog::post" 
+             parent="SaberSmesem_MageBlog::menu_mage_blog"/>
+    
+        <add id="SaberSmesem_MageBlog::mageblog_configuration" 
+             title="Configuration" module="SaberSmesem_MageBlog" 
+             sortOrder="99" parent="SaberSmesem_MageBlog::menu_mage_blog" 
+             action="adminhtml/system_config/edit/section/mageblog" 
+             resource="SaberSmesem_MageBlog::mageblog_configuration"/>
 
     </menu>
 </config>
