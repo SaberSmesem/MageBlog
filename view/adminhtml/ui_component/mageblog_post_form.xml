@@ -8,6 +8,13 @@
 
         <item name="label" xsi:type="string" translate="true">Post Information</item>
         
+        <item name="buttons" xsi:type="array">
+            <item name="back" xsi:type="string">SaberSmesem\MageBlog\Block\Adminhtml\Edit\Button\Back</item>
+            <item name="save" xsi:type="string">SaberSmesem\MageBlog\Block\Adminhtml\Edit\Button\Save</item>
+            <!-- <item name="reset" xsi:type="string">SaberSmesem\MageBlog\Block\Adminhtml\Edit\Button\Reset</item>
+            <item name="delete" xsi:type="string">SaberSmesem\MageBlog\Block\Adminhtml\Edit\Button\Delete</item> -->
+        </item>
+
         <item name="config" xsi:type="array">
             <item name="dataScope" xsi:type="string">data</item>
             <item name="namespace" xsi:type="string">mageblog_post_form</item>
