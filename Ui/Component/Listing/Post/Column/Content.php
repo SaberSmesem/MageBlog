@@ -37,6 +37,8 @@ class Content extends Column
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as &$item) {
                 $name = $this->getData('name');
+                // strip html tags and return only string
+                $item[$name] = str_replace('&nbsp;',' ',strip_tags($item[$name],'&nbsp;'));
                 if (isset($item[$name]) && strlen($item[$name])>150) {
                     $item[$name] = mb_substr($item[$name], 0, 150, 'UTF-8')."...";
                 }
