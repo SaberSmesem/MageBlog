@@ -65,14 +65,14 @@
             </argument>
         </field> -->
 
-        <field name="post_title">
+        <field name="title">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Title</item>
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="source" xsi:type="string">post</item>
-                    <item name="dataScope" xsi:type="string">post_title</item>
+                    <item name="dataScope" xsi:type="string">title</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
                     </item>
@@ -88,7 +88,7 @@
             </settings> -->
         </field>
 
-        <field name="post_slug">
+        <field name="slug">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
@@ -125,7 +125,7 @@
 
 
         <!-- wysiwyg editor field for post content -->
-        <field name="post_content" sortOrder="10" formElement="wysiwyg" template="ui/form/field">
+        <field name="content" sortOrder="10" formElement="wysiwyg" template="ui/form/field">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">post</item>
@@ -155,7 +155,7 @@
         </field>
 
         <!-- checkbox toggle field -->
-        <field name="post_status" sortOrder="10" formElement="checkbox">
+        <field name="status" sortOrder="10" formElement="checkbox">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="default" xsi:type="string">1</item>
